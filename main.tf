@@ -11,9 +11,11 @@ resource "azurerm_resource_group" "rgdemo" {
 
 variable "name" {
   type = string
+  default = "rgdemo"
 }
 
 variable "location" {
   type = string
+  default = "East US"
 }
 
