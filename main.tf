@@ -5,6 +5,14 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "rgdemo" {
-  name     = "rg-demo-terraform-001"
-  location = "East US"
+  name     = var.name
+  location = var.location
+}
+
+variable "name" {
+  type = string
+}
+
+variable "location" {
+  type = string
 }
