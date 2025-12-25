@@ -1,14 +1,19 @@
 terraform {
   required_providers {
     azurerm = {
-        source = "hashicorp/azurerm"
-        version = "4.50.0"
+      source  = "hashicorp/azurerm"
+      version = "4.50.0"
     }
   }
 }
 
 provider "azurerm" {
   features {
-    
+
   }
+}
+
+resource "azurerm_resource_group" "rgdemo" {
+  name     = "rg-demo-terraform-001"
+  location = "East US"
 }
