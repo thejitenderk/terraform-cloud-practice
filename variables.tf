@@ -1,10 +1,12 @@
-variable "name" {
-  type = list(string)
-  default = ["rgdemo1", "rgdemo2", "rgdemo3"]
+variable "rgs" {
+ type = ["abc", "abd", "abe", "abc", "abf"]
 }
 
-variable "location" {
-  type = string
-  default = "East US"
-}
-
+# variable "vnets" {
+#   type = map(object({
+#     name                = string
+#     address_space       = list(string)
+#     location            = string
+#     resource_group_name = string
+#   }))
+# }
