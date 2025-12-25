@@ -5,17 +5,8 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "rgdemo" {
-  name     = var.name
-  location = var.location
-}
-
-variable "name" {
-  type = string
-  default = "rgdemo"
-}
-
-variable "location" {
-  type = string
-  default = "East US"
+  for_each = toset(var.name)
+  name     = each.value
+  location = "east us"
 }
 
