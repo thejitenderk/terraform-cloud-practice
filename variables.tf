@@ -1,5 +1,6 @@
 variable "rgs" {
- type = ["abc", "abd", "abe", "abc", "abf"]
+  type    = list(string)
+  default = ["abc", "abd", "abe", "abc", "abf"]
 }
 
 # variable "vnets" {
