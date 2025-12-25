@@ -5,7 +5,7 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "rgdemo" {
-  for_each = toset(var.rgs)
+  for_each = var.rgs
   name     = each.value
   location = "eastus"
 }
